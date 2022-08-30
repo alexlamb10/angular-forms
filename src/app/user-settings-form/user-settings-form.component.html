@@ -5,7 +5,7 @@
 
       <div class="form-group">
         <label for="name">Name</label>
-        <input id="name" name="name" class="form-control" [(ngModel)]="userSettings.name" required #nameField="ngModel" [class.field-error]="form.submitted && nameField.invalid"/>
+        <input id="name" name="name" class="form-control" [(ngModel)]="userSettings.name" required #nameField="ngModel" (blur)="onBlur(nameField)" [class.field-error]="form.submitted && nameField.invalid"/>
         <div [hidden]="!form.submitted || nameField.valid"
           class="alert alert-danger">
           Enter a name
@@ -35,7 +35,7 @@
           <label class="form-check-label" for="mediumInterface">
             Medium
           </label>
-        </div>
+        </div>      
         <div class="form-check">
           <input class="form-check-input" type="radio" name="interfaceStyle" 
                   id="darkInterface" value="dark" [(ngModel)]="userSettings.interfaceStyle">
