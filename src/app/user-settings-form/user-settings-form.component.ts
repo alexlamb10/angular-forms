@@ -1,3 +1,4 @@
+import { UserSettings } from './../data/user-settings';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-settings-form.component.css']
 })
 export class UserSettingsFormComponent implements OnInit {
+
+  userSettings: UserSettings = {
+    name: 'Alex',
+    emailOffers: true,
+    interfaceStyle: "dark",
+    subscriptionType: "Annual",
+    notes: "here are some notes"
+  }
 
   constructor() { }
 
