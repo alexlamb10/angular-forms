@@ -9,11 +9,11 @@ import { Component, OnInit } from '@angular/core';
 export class UserSettingsFormComponent implements OnInit {
 
   originalUserSettings: UserSettings = {
-    name: 'Alex',
-    emailOffers: true,
-    interfaceStyle: "dark",
-    subscriptionType: "Annual",
-    notes: "here are some notes"
+    name: '',
+    emailOffers: false,
+    interfaceStyle: "",
+    subscriptionType: "",
+    notes: ""
   }
 
   userSettings:UserSettings = {...this.originalUserSettings};
